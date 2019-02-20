@@ -37,7 +37,7 @@ export class AppComponent {
   num:number = 0;
 
   add(){
-    console.log('CLICKED')
+    console.log('change happend')
     this.num++;
   }
   }
