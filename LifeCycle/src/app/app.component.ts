@@ -7,17 +7,16 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular LifeCycle Hooks';
-  private init: string;
-  private onchanges: string;
-  private docheck: string;
-  private aftercontentinit: string;
-  private aftercontentchecked: string;
-  private afterviewinit: string;
-  private aftterviewchecked: string;
-  private ondestroy: string;
+  public init: string;
+  public onchanges: string;
+  public docheck: string;
+  public aftercontentinit: string;
+  public aftercontentchecked: string;
+  public afterviewinit: string;
+  public aftterviewchecked: string;
+  public ondestroy: string;
   ngOnInit() {
-    console.log('ngOnInit');
-    this.init='i am ngInit method property';
+     this.init='i am ngInit method property';
   }
   ngOnChanges(){
     console.log('ngOnChanges');
