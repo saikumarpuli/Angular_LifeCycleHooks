@@ -1,0 +1,13 @@
+   <h1>
+    {{ title | lowercase}}!
+  </h1>
+  {{init}}<br/>
+  {{onchanges}}<br/>
+  {{docheck}}<br/>
+  {{aftercontentinit}}<br/>
+  {{aftercontentchecked}}<br/>
+  {{afterviewinit}}<br/>
+  {{aftterviewchecked}}<br/>
+  {{ondestroy}}
+  <router-outlet></router-outlet>
+<app-child [Name]="init"></app-child>
