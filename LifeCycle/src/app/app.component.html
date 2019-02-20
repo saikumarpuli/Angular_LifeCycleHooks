@@ -1,13 +1,6 @@
    <h1>
-    {{ title | lowercase}}!
+    {{ title}}
   </h1>
-  {{init}}<br/>
-  {{onchanges}}<br/>
-  {{docheck}}<br/>
-  {{aftercontentinit}}<br/>
-  {{aftercontentchecked}}<br/>
-  {{afterviewinit}}<br/>
-  {{aftterviewchecked}}<br/>
-  {{ondestroy}}
-  <router-outlet></router-outlet>
-<app-child [Name]="init"></app-child>
+   <button (click)="add()">add</button>
+   <router-outlet></router-outlet>
+<app-child [num]="num"></app-child>
