@@ -34,10 +34,11 @@ export class AppComponent {
   ngOnDestroy(){
     console.log('ngOnDestory');
   }
-  num:number = 0;
+  num:any = 0;
 
   add(){
     console.log('change happend')
     this.num++;
   }
+
   }

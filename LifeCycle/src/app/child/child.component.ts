@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {LocalStorage} from "@ngx-pwa/local-storage";
 
 @Component({
   selector: 'app-child',
@@ -6,10 +7,26 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-
-  constructor() { }
+  private deta: any;
+  constructor( private localstorage:LocalStorage) { }
   @Input()public number;
-  ngOnInit() {
-  }
+  @Output() saving:EventEmitter<any>=new EventEmitter();
+  data:any;
+  save: any="save";
+  get: any="get";
+    ngOnInit() {
+   }
 
+  savedata() {
+    this.localstorage.setItem('data',this.data).subscribe(()=>{});
+    console.log("success")
+   }
+
+  getdata() {
+    this.localstorage.getItem<any>('data').subscribe((user) => {
+      this.deta = user;
+      this.saving.emit(this.deta)
+      console.log(this.deta);
+    })
+}
 }

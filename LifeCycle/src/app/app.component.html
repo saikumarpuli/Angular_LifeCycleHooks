@@ -3,4 +3,5 @@
   </h1>
    <button (click)="add()">add</button>
    <router-outlet></router-outlet>
-<app-child [number]="num"></app-child>
+<app-child [number]="num" (saving)="num=$event"></app-child>
+QWDXSS{{num}}
